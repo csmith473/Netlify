@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Horoscope</title>
+    <style>
+      body {
+        background: linear-gradient(
+          rgb(165, 181, 250) 10%,
+          rgb(228, 235, 252) 90%
+        );
+      }
+      div {
+        max-width: 50%;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px gray;
+        color: rgb(23, 21, 24);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      h1 {
+        border: 1px solid black;
+        margin: 0 auto;
+        margin-top: 15px;
+        text-align: center;
+        border-radius: 3px;
+        padding: 15px 30px;
+        max-width: 50%;
+      }
+      h2 {
+        text-align: center;
+        margin: 30px auto;
+      }
+      .learn-sign {
+        cursor: pointer;
+        text-decoration: none;
+        color: rgb(23, 21, 24);
+      }
+      .learn-sign:hover {
+        text-decoration: underline;
+      }
+      img {
+        width: 450px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 4px;
+      }
+
+      hr {
+        width: 600px;
+      }
+      h3 {
+        padding: 5px 30px;
+        margin: 20px 40px;
+        text-align: center;
+      }
+      h3:hover {
+        background-color: rgb(165, 181, 250, 0.15);
+        border-radius: 6px;
+        transition: all 200ms ease-in-out;
+      }
+      .description {
+        line-height: 25px;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: normal;
+      }
+      .textHighlight {
+        opacity: 85%;
+      }
+      button {
+        display: block;
+        text-align: center;
+        margin: 40px auto 15px auto;
+        padding: 15px 20px;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(40, 80, 211);
+        border-color: rgb(40, 80, 211);
+        border-radius: 80px;
+        box-shadow: 5px 5px 10px black;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+        font-family: monospace;
+        opacity: 70%;
+        margin-top: 50px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Your Daily Horoscope</h1>
+      <h2>
+        🌜 Based on Your
+        <a
+          href="https://www.costarastrology.com/zodiac-signs/"
+          target="_blank"
+          class="learn-sign"
+        >
+          <em>Star Sign</em></a
+        >
+        🌛
+      </h2>
+      <hr />
+      <br />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/043/original/zodiac-sign-horoscope-circle-blue-watercolor-constellation-stars-sun-moon-stein-hand-painting-spot-sky-white-58461979.jpg?1625161994"
+        alt="Horoscope Signs"
+      />
+      <br />
+      <br />
+      <hr />
+      <h3>
+        <p class="description">
+          All zodiac signs have their own
+          <span class="textHighlight">characteristics</span> and
+          <span class="textHighlight">traits</span> which define someone’s
+          personality. Wouldn’t it be helpful if you started your day by already
+          knowing about what’s going to come your way?
+          <strong>Click</strong> below to see whether the odds will be in your
+          favour today.
+        </p>
+      </h3>
+
+      <button>Astrological Prediction</button>
+      <p class="footer">Coded by Courtney Smith</p>
+    </div>
+    <script>
+      function horoscopeReading() {
+        let name = prompt("What is your first name?");
+        let month = prompt("In which month were you born?");
+        let date = prompt("What is the date were you born?");
+        month = month.toLowerCase();
+        month = month.trim();
+        date = date.trim();
+        if (
+          (month === "march" && date >= 21) ||
+          (month === "april" && date <= 19)
+        ) {
+          alert(
+            "Send nurturing energy to yourself today, Aries. The revelations you wrestled with this week have likely taken a toll on you, and the nurturing moon’s presence in your sign indicates that you need a little TLC. Luna spends the day in a sweet connection with Mercury, making it easy to get things off your chest in conversational settings and regain emotional equilibrium."
+          );
+        } else {
+          if (
+            (month === "april" && date >= 20) ||
+            (month === "may" && date <= 20)
+          ) {
+            alert(
+              "Unplug yourself from the world today, Taurus. You need ample time away to process the frustrations that have emerged in recent days. Let yourself sneak off to your favorite patch of nature and get lost in a solo activity. The me-first Aries moon links up with expressive Mercury too, making it easy to tap into your talents and regain a sense of balance through them."
+            );
+          }
+          if (
+            (month === "may" && date >= 21) ||
+            (month === "june" && date <= 20)
+          ) {
+            alert(
+              "Turn to your social network today, Gemini. After an intense week, you need to let loose with the people you cherish. The moon spends the day parading through eager Aries, directing your focus to your friend groups and sense of community. Luna’s sweet connection with your ruling planet, talkative Mercury, revives your charismatic communication skills and helps you cultivate a sense of balance between head and heart."
+            );
+          }
+          if (
+            (month === "june" && date >= 21) ||
+            (month === "july" && date <= 22)
+          ) {
+            alert(
+              "You need an outlet today, Cancer. The cosmos suggests sending your energy towards getting ahead with your personal career ambitions, as the moon coasts through initiative-hungry Aries. Luna’s supportive connection with expressive Mercury offers the chance to engage in healing conversations. This aspect also supports any writing or communication-based endeavors, making them run more smoothly."
+            );
+          }
+          if (
+            (month === "july" && date >= 23) ||
+            (month === "august" && date <= 22)
+          ) {
+            alert(
+              "Get out of your routine today, Leo. You’re aching for a fresh perspective after handling the tensions that emerged in recent days. The pioneering Aries moon encourages you to get out of your comfort zone, explore new things, or get lost in a good book or movie that mentally resets you. Luna’s sweet link with expressive Mercury also makes the perfect opportunity for networking and venting with friends."
+            );
+          }
+          if (
+            (month === "august" && date >= 23) ||
+            (month === "september" && date <= 22)
+          ) {
+            alert(
+              "You’re in need of healing today, Virgo. Be easy on yourself if productive action doesn’t “click on” like a light switch. The self-concerned Aries moon points your focus towards relationship hang-ups and any unexpressed feelings that need honoring. It’s an ideal day to seek out a therapeutic outlet. Luna’s smooth connection with your ruling planet, mental Mercury, offers you the chance to regain equilibrium between head and heart."
+            );
+          }
+          if (
+            (month === "september" && date >= 23) ||
+            (month === "october" && date <= 22)
+          ) {
+            alert(
+              "Direct your focus towards the close relationships in your world today, Libra. Yesterday’s skies may have ruffled feathers in this arena. The moon floats through your opposite sign of self-motivated Aries, calling your attention towards the expectations, projections, and needs associated with romantic partners. Smooth, healing conversations are critical on this front today, as the moon links up with expressive Mercury."
+            );
+          }
+          if (
+            (month === "october" && date >= 23) ||
+            (month === "november" && date <= 21)
+          ) {
+            alert(
+              "You need time to shake off this week’s intensity, Scorpio. The universe encourages you to devote attention to your work/life balance in order to feel your best. The hyperactive Aries moon offers an outlet by investing your time into exercise and proper eating. If movement feels unappealing, direct your focus towards conquering errands and workloads instead. Luna’s link with Mercury offers room for soothing conversation in the intimacy department."
+            );
+          }
+          if (
+            (month === "november" && date >= 22) ||
+            (month === "december" && date <= 21)
+          ) {
+            alert(
+              "Let yourself cultivate a good time today, Sagittarius. You’ve dealt with enough mental anguish this week, why continue to suffer? The moon’s presence in self-motivated Aries encourages you to devote energy to creative passion projects and romantic relations. Save productive action for another day. Luna’s sweet connection with expressive Mercury offers smooth conversations on the partnership front."
+            );
+          }
+          if (
+            (month === "december" && date >= 22) ||
+            (month === "january" && date <= 19)
+          ) {
+            alert(
+              "Pull away from the world and retreat into a healing headspace today, Capricorn. The cosmic landscape has been fraught this week, and you deserve some time to heal and recuperate from any ruffled feathers. Luna’s presence in go-getter Aries encourages you to send any excess energy towards your home environment—think: decorating, renovations, or simply cleaning up. Luna’s meet-up with Mercury cultivates clarity on the work front."
+            );
+          }
+          if (
+            (month === "january" && date >= 20) ||
+            (month === "february" && date <= 18)
+          ) {
+            alert(
+              "You’ve got things to get off your chest today, Aquarius. Rather than bottling them up and chewing on them rationally, aim to share from a vulnerable place. The moon’s presence in capable Aries encourages you to put your mind to good use too, making it a good day to engage in any mentally strenuous activities. Luna’s link to Mercury offers up healing conversations on the romantic front."
+            );
+          }
+          if (
+            (month === "february" && date >= 19) ||
+            (month === "march" && date <= 20)
+          ) {
+            alert(
+              "You need productive action to help you move through the frustrations you’ve been dealing with, Pisces. The self-motivated Aries moon implores you to dust off any forgotten skills or talents and bring them into the light today. You’ve got everything you need to push ahead and further hone your abilities. Luna’s supportive link with mentally sharp Mercury offers healing conversations on the home and family front."
+            );
+          }
+        }
+      }
+      let horoscopeButton = document.querySelector("button");
+      horoscopeButton.addEventListener("click", horoscopeReading);
+    </script>
+  </body>
+</html>
